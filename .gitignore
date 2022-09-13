@@ -11,6 +11,10 @@
 .packages
 .pub-cache/
 .pub/
+linux/
+macos/
+web/
+windows/
 build/
 coverage/
 lib/generated_plugin_registrant.dart
