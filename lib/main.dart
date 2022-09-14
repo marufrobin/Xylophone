@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 void main() {
   runApp(Xylophone());
@@ -24,7 +25,7 @@ class Xylophone extends StatelessWidget {
           title: Text("Xylophone"),
           centerTitle: true,
         ),
-        body: Text(words.length.toString()),
+        body: Text(words.toString()),
       ),
     );
   }
