@@ -1,16 +1,5 @@
 # xylophone
 
-A new Flutter project.
+A new Flutter project Called "Xylophone". Here, I will build application that make sound with press of button.
+![Xylophone](https://user-images.githubusercontent.com/47666475/190356903-fbadf19f-d9ff-40af-97a3-1cb8c885a38d.png)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
