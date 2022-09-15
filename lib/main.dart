@@ -15,18 +15,21 @@ class Xylophone extends StatelessWidget {
   //     },
   //   );
   // }
+
   Widget noteContainer({required int noteNumber, required Color clr}) {
-    return Container(
-      color: clr,
-      child: TextButton(
-        onPressed: () async {
-          final player = AudioPlayer();
-          // await player.setSource(AssetSource('/assets/note1.wav'));
-          await player.play(AssetSource('note$noteNumber.wav'));
-        },
-        child: Text(
-          'Note $noteNumber.',
-          style: TextStyle(color: Colors.black),
+    return Expanded(
+      child: Container(
+        color: clr,
+        child: TextButton(
+          onPressed: () async {
+            final player = AudioPlayer();
+            // await player.setSource(AssetSource('/assets/note1.wav'));
+            await player.play(AssetSource('note$noteNumber.wav'));
+          },
+          child: Text(
+            'Note $noteNumber',
+            style: TextStyle(color: Colors.black, fontSize: 25),
+          ),
         ),
       ),
     );
@@ -37,20 +40,24 @@ class Xylophone extends StatelessWidget {
     // genratreswords();
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Xylophone"),
-          centerTitle: true,
-        ),
-        body: Column(
-          children: [
-            noteContainer(clr: Colors.red, noteNumber: 1),
-            noteContainer(clr: Colors.orange, noteNumber: 2),
-            noteContainer(clr: Colors.yellow, noteNumber: 3),
-            noteContainer(clr: Colors.green, noteNumber: 4),
-            noteContainer(clr: Colors.teal, noteNumber: 5),
-            noteContainer(clr: Colors.blue, noteNumber: 6),
-            noteContainer(clr: Colors.purple, noteNumber: 7)
-          ],
+        backgroundColor: Colors.black,
+        // appBar: AppBar(
+        //   title: Text("Xylophone"),
+        //   centerTitle: true,
+        // ),
+        body: SafeArea(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              noteContainer(clr: Colors.red, noteNumber: 1),
+              noteContainer(clr: Colors.orange, noteNumber: 2),
+              noteContainer(clr: Colors.yellow, noteNumber: 3),
+              noteContainer(clr: Colors.green, noteNumber: 4),
+              noteContainer(clr: Colors.teal, noteNumber: 5),
+              noteContainer(clr: Colors.blue, noteNumber: 6),
+              noteContainer(clr: Colors.purple, noteNumber: 7)
+            ],
+          ),
         ),
       ),
     );
